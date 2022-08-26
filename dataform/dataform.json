@@ -2,7 +2,7 @@
     "warehouse": "bigquery",
     "defaultSchema": "df_example",
     "assertionSchema": "df_example_assertions",
-    "defaultDatabase": "dev-bq-322916",
+    "defaultDatabase": "BQ_GCP_PROJECT_ID",
     "useRunCache": false,
     "defaultLocation": "EU"
 }

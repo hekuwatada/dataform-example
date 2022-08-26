@@ -1,4 +1,4 @@
-# Create a dtaset, table and view
+# Create a dtaset, table and view with unit test
 
 ## Step 1: Create a table and view in a dataset
 
@@ -82,4 +82,28 @@ Assertion passed:  df_example_assertions.df_example_age_groups_assertions_rowCon
   df_example_age_groups_assertions_uniqueKey_0     VIEW
   df_example_ages_assertions_rowConditions         VIEW
   df_example_ages_assertions_uniqueKey_0           VIEW
+```
+
+## Step 5: Unit test the view
+- (1) Add a unit test as a test SQLX
+  - Use type: "test"
+  - Use `input "<source table>"` to generate input data to the SUT 
+- (2) Run `dataform compile` for syntax errors
+  - NOTE: It will not generate any action as it will not create or update any BigQuery object
+- (3) Run `dataform test` to run unit tests only
+  - NOTE: It will use the definition of the SUT reading `FROM` the input data specified in `input`
+  - For example, a generated unit test will look like:
+```
+SELECT
+  FLOOR(age / 5) * 5 AS age_group,
+  COUNT(1) AS user_count
+FROM
+  (
+  SELECT 15 AS age UNION ALL
+  SELECT 21 AS age UNION ALL
+  SELECT 24 AS age UNION ALL
+  SELECT 34 AS age
+)
+GROUP BY
+  age_group
 ```

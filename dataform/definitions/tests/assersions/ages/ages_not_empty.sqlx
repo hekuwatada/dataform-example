@@ -1,0 +1,17 @@
+config {
+  type: "assertion",
+  tags: ["dqa"]
+}
+
+WITH test AS (
+  SELECT
+    COUNT(1) AS cnt
+  FROM
+    ${ref("ages")}
+)
+SELECT
+  *
+FROM
+  test
+WHERE
+  cnt <= 0

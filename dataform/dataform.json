@@ -1,0 +1,8 @@
+{
+    "warehouse": "bigquery",
+    "defaultSchema": "df_example",
+    "assertionSchema": "df_example_assertions",
+    "defaultDatabase": "dev-bq-322916",
+    "useRunCache": false,
+    "defaultLocation": "EU"
+}

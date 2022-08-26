@@ -1,0 +1,38 @@
+config {
+  type: "table",
+  assertions: {
+    uniqueKey: ["user_id"],
+    nonNull: ["user_id", "age"],
+    rowConditions: [
+      "age > 0"
+    ]
+  }
+}
+
+SELECT
+  1 AS user_id,
+  16 AS age
+UNION ALL
+SELECT
+  2 AS user_id,
+  17 AS age
+UNION ALL
+SELECT
+  3 AS user_id,
+  31 AS age
+UNION ALL
+SELECT
+  4 AS user_id,
+  33 AS age
+UNION ALL
+SELECT
+  5 AS user_id,
+  34 AS age
+UNION ALL
+SELECT
+  6 AS user_id,
+  46 AS age
+UNION ALL
+SELECT
+  7 AS user_id,
+  49 AS age

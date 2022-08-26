@@ -85,7 +85,7 @@ Assertion passed:  df_example_assertions.df_example_age_groups_assertions_rowCon
 ```
 
 ## Step 5: Unit test the view
-- (1) Add a unit test as a test SQLX
+- (1) Add a [unit test](../dataform/definitions/tests/unit_tests/age_groups/age_groups_test_grouping.sqlx) for a [view](../dataform/definitions/src/models/age_groups.sqlx) to test (Subject Under Test) as a test SQLX
   - Use type: "test"
   - Use `input "<source table>"` to generate input data to the SUT 
 - (2) Run `dataform compile` for syntax errors

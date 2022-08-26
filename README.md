@@ -35,6 +35,3 @@ make docker/run
 ### How this Dataform project was created
 
 The base Dataform project was copied from https://github.com/hekuwatada/dataform-assertions-example.
-
-### References
-- https://docs.dataform.co/guides/assertions

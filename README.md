@@ -7,27 +7,10 @@ This repo is to explore features of Dataform on below points:
 - managing table dependencies
 - documentations
 
-## Tasks
+## Examples
+- [Create a dataset, table and view](./docs/create-dataset-table-view.md)
+- [Unit test a view](./docs/create-dataset-table-view.md#step-5-unit-test-the-view)
 
-- [x] Add Dockerfile to run Dataform CLI
-- [x] Add devcontainer.json for VSCode
-- [ ] Add unit tests
-
-## How to run assertions locally
-
-Below make target runs dataform assertions in a container:
-```
-make dataform/test
-```
-
-Alternatively, run `dataform` directly in a container:
-```
-# entre the container
-make docker/run
-
-# in /workspaces/dataform directory in the container
-dataform run
-```
 
 ## Appendix
 

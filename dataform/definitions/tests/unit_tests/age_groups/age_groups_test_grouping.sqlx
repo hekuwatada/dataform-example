@@ -14,21 +14,6 @@ UNION ALL
 SELECT
   30 AS age_group,
   1 AS user_count
-  -- This unit test will be translated to:
-  --
-  -- SELECT
-  --   FLOOR(age / 5) * 5 AS age_group,
-  --   COUNT(1) AS user_count
-  -- FROM
-  --   (
-  --   SELECT 15 AS age UNION ALL
-  --   SELECT 21 AS age UNION ALL
-  --   SELECT 24 AS age UNION ALL
-  --   SELECT 34 AS age
-  -- )
-  -- GROUP BY
-  --   age_group
-  --
 
 input "ages" {
   SELECT

@@ -1,6 +1,7 @@
-# Dataform example with 
+# Dataform example project
 
 This repo is to explore features of Dataform on below points:
+
 - unit tests
 - assertions
 - code reuse
@@ -8,13 +9,55 @@ This repo is to explore features of Dataform on below points:
 - documentations
 
 ## Examples
+
 - [Create a dataset, table and view](./docs/create-dataset-table-view.md)
 - [Unit test a view](./docs/create-dataset-table-view.md#step-5-unit-test-the-view)
 
+## How to run the project
+
+#### Step 1: Install dependencies
+
+```
+cd dataform
+dataform install
+```
+
+#### Step 2: Compile & format
+
+In `dataform/` directory, run:
+
+```
+dataform format
+dataform compile
+```
+
+#### Step 3: Store credentials to run tests and deploy
+
+In `dataform/` directory, run:
+
+```
+dataform init-creds bigquery .
+```
+
+#### Step 3: Run unit tests
+
+In `dataform/` directory, run:
+
+```
+dataform test
+```
+
+#### Step 4: Deploy
+
+In `dataform/` directory, run:
+
+```
+dataform run
+```
 
 ## Appendix
 
-###  How to run Dataform CLI locally (Docker)
+### How to run Dataform CLI locally (Docker)
 
 ```
 make docker/build
